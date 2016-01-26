@@ -11,7 +11,7 @@ function leftPad(number, targetLength) {
     }
     return output;
 }
-
+// function creates a main function but you have to call it later
 function check(combo){
   if(pinCode == combo) {
     return true;
