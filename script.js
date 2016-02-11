@@ -1,7 +1,7 @@
-var pinCode = "9999";
+var pinCode = "0051";
 
-// leftPad by timrwood
-// http://stackoverflow.com/questions/8043026/javascript-format-number-to-have-2-digit
+
+
 function leftPad(number, targetLength) {
     var output = number + '';
     while (output.length < targetLength) {
@@ -10,16 +10,22 @@ function leftPad(number, targetLength) {
     return output;
 }
 
-function check(combo){
-	
+// count = 51
+function check(count){
+  var testPinCode = leftPad(count, 4) // 0051
+  return testPinCode == pinCode
 }
 
 var found = false;
 var count = 0;
 while(!found && count < 10000){
-	
+  var isPin = check(count);
+	if(isPin) {
+    found = true;
+  }
+  count++;
 }
 
-if (found) {
-	alert();
+if (found===true){
+	alert("it's true! ");
 }
