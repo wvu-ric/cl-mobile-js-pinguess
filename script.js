@@ -1,4 +1,5 @@
-var pinCode = "0049";
+var pinCode = "0051";
+
 
 
 function leftPad(number, targetLength) {
@@ -9,8 +10,10 @@ function leftPad(number, targetLength) {
     return output;
 }
 
+// count = 51
 function check(count){
- return count === 49
+  var testPinCode = leftPad(count, 4) // 0051
+  return testPinCode == pinCode
 }
 
 var found = false;
